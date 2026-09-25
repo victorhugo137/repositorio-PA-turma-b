@@ -1,0 +1,26 @@
+votos = [0, 0, 0, 0, 0]
+
+while True:
+    voto = int(input("Voto (1-João, 2-Maria, 3-José, 4-Nulo, 5-Branco, 0-Encerrar): "))
+    if voto == 0:
+        break
+    elif 1 <= voto <= 5:
+        votos[voto - 1] += 1
+    else:
+        print("Opção inválida!")
+
+print(f"João: {votos[0]}")
+print(f"Maria: {votos[1]}")
+print(f"José: {votos[2]}")
+print(f"Nulos: {votos[3]}")
+print(f"Brancos: {votos[4]}")
+
+votos_candidatos = votos[:3]
+maior_voto = max(votos_candidatos)
+nombres = ["João", "Maria", "José"]
+
+if votos_candidatos.count(maior_voto) > 1:
+    print("Houve empate entre os candidatos!")
+else:
+    vencedor = nombres[votos_candidatos.index(maior_voto)]
+    print(f"Vencedor: {vencedor}")

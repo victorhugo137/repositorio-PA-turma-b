@@ -1,0 +1,31 @@
+import random
+
+tabuleiro = [0] * 10
+minas = random.sample(range(10), 3)
+
+for pos in minas:
+    tabuleiro[pos] = 1
+
+passos = 0
+perdeu = False
+pisados = []
+
+while passos < 5:
+    pos = int(input("Escolha um índice para pisar (0 a 9): "))
+    if pos < 0 or pos > 9:
+        print("Posição inválida!")
+        continue
+    if pos in pisados:
+        print("Você já pisou nessa posição!")
+        continue
+
+    pisados.append(pos)
+    if tabuleiro[pos] == 1:
+        perdeu = True
+        break
+    passos += 1
+
+if perdeu:
+    print("BOOM! Você pisou em uma mina. Fim de jogo!")
+else:
+    print("Parabéns! Você sobreviveu aos 5 passos e venceu!")

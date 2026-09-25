@@ -1,0 +1,50 @@
+conta_criada = False
+nome = ""
+conta = ""
+saldo = 0.0
+
+while True:
+    print("\n--- BANCO ---")
+    print("1- Criar Conta\n2- Depositar\n3- Sacar\n4- Extrato/Ver Saldo\n5- Sair")
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == '1':
+        nome = input("Digite o seu nome: ")
+        conta = input("Digite o número da conta: ")
+        saldo = 0.0
+        conta_criada = True
+        print("Conta criada com sucesso!")
+    elif opcao == '2':
+        if not conta_criada:
+            print("Crie uma conta primeiro!")
+        else:
+            valor = float(input("Digite o valor para depósito: R$ "))
+            if valor > 0:
+                saldo += valor
+                print("Depósito realizado!")
+            else:
+                print("Valor de depósito inválido!")
+    elif opcao == '3':
+        if not conta_criada:
+            print("Crie uma conta primeiro!")
+        else:
+            valor = float(input("Digite o valor para saque: R$ "))
+            if valor <= 0:
+                print("Valor de saque inválido!")
+            elif valor > saldo:
+                print("Saldo insuficiente! Operação negada.")
+            else:
+                saldo -= valor
+                print("Saque realizado!")
+    elif opcao == '4':
+        if not conta_criada:
+            print("Crie uma conta primeiro!")
+        else:
+            print(f"\nTitular: {nome}")
+            print(f"Conta: {conta}")
+            print(f"Saldo atual: R$ {saldo:.2f}")
+    elif opcao == '5':
+        print("Obrigado por utilizar nosso banco!")
+        break
+    else:
+        print("Opção inválida!")

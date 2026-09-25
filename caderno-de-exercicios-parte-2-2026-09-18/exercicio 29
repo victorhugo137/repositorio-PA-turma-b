@@ -1,0 +1,12 @@
+lista = []
+for i in range(8):
+    val = int(input(f"Digite o {i+1}º número: "))
+    lista.append(val)
+
+busca = int(input("Digite o número de busca: "))
+
+if busca in lista:
+    posicao = lista.index(busca)
+    print(f"O número {busca} está presente na posição {posicao}.")
+else:
+    print(f"O número {busca} não foi encontrado na lista.")

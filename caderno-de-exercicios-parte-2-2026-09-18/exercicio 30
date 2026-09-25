@@ -1,0 +1,12 @@
+nomes = []
+notas = []
+
+for i in range(3):
+    nome = input(f"Digite o nome do {i+1}º aluno: ")
+    nota = float(input(f"Digite a nota do {i+1}º aluno: "))
+    nomes.append(nome)
+    notas.append(nota)
+
+for i in range(3):
+    status = "Aprovado" if notas[i] >= 7 else "Reprovado"
+    print(f"Aluno: {nomes[i]} | Nota: {notas[i]} | Status: {status}")

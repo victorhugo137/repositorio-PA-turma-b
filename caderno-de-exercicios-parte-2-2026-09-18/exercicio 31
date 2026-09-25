@@ -1,0 +1,11 @@
+vetor = []
+for i in range(5):
+    vetor.append(input(f"Digite o {i+1}º valor: "))
+
+print("Ordem digitada:", vetor)
+
+inverso = []
+for i in range(len(vetor) - 1, -1, -1):
+    inverso.append(vetor[i])
+
+print("Ordem inversa:", inverso)

@@ -1,0 +1,9 @@
+vetor = []
+
+for i in range(5):
+    num = int(input(f"Digite o número para o índice {i}: "))
+    vetor.append(num)
+
+print("\nPosições e Valores:")
+for i in range(len(vetor)):
+    print(f"Índice {i}: valor = {vetor[i]}")

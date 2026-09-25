@@ -1,0 +1,20 @@
+poltronas = [False] * 10
+
+while True:
+    print("\nEstado das poltronas:")
+    for i in range(10):
+        status = "Ocupada" if poltronas[i] else "Livre"
+        print(f"[{i}: {status}]", end=" ")
+    print("\n")
+
+    reserva = int(input("Digite o número da poltrona para reservar (ou número negativo para sair): "))
+    if reserva < 0:
+        break
+
+    if reserva >= 10:
+        print("Poltrona inválida!")
+    elif poltronas[reserva]:
+        print("Ocupada")
+    else:
+        poltronas[reserva] = True
+        print("Reservada")

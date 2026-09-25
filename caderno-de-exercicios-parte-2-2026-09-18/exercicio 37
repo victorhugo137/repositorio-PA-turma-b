@@ -1,0 +1,36 @@
+produtos = []
+quantidades = []
+
+while True:
+    print("\n1- Adicionar Produto\n2- Dar Baixa\n3- Ver Estoque\n4- Sair")
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == '1':
+        nome = input("Nome do produto: ")
+        qtde = int(input("Quantidade: "))
+        if nome in produtos:
+            idx = produtos.index(nome)
+            quantidades[idx] += qtde
+        else:
+            produtos.append(nome)
+            quantidades.append(qtde)
+    elif opcao == '2':
+        nome = input("Nome do produto: ")
+        if nome in produtos:
+            idx = produtos.index(nome)
+            qtde = int(input("Quantidade para baixa: "))
+            if quantidades[idx] >= qtde:
+                quantidades[idx] -= qtde
+                print("Baixa realizada!")
+            else:
+                print("Estoque insuficiente!")
+        else:
+            print("Produto não encontrado!")
+    elif opcao == '3':
+        print("\nEstoque Atual:")
+        for i in range(len(produtos)):
+            print(f"Produto: {produtos[i]} | Quantidade: {quantidades[i]}")
+    elif opcao == '4':
+        break
+    else:
+        print("Opção inválida!")

@@ -1,0 +1,12 @@
+frase = input("Digite uma frase: ")
+
+palavras = frase.split()
+qtd_palavras = len(palavras)
+
+qtd_a = 0
+for char in frase:
+    if char.upper() == 'A':
+        qtd_a += 1
+
+print(f"Quantidade de palavras: {qtd_palavras}")
+print(f"Quantidade de letras 'A': {qtd_a}")

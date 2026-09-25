@@ -1,0 +1,6 @@
+Q = int(input("Digite a quantidade Q de termos: "))
+a, b = 0, 1
+for _ in range(Q):
+    print(a, end=" ")
+    a, b = b, a + b
+print()

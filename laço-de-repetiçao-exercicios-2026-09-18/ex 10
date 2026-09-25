@@ -1,0 +1,10 @@
+total_alunos = int(input("Quantos alunos existem? "))
+notas = []
+
+for i in range(total_alunos):
+    nota = float(input(f"Digite a nota do aluno {i + 1}: "))
+    notas.append(nota)
+
+if len(notas) > 0:
+    media = sum(notas) / len(notas)
+    print(f"Média da turma: {media}")

@@ -1,0 +1,9 @@
+senha_secreta = "etec123"
+senha = ""
+
+while senha != senha_secreta:
+    senha = input("Digite a senha: ")
+    if senha != senha_secreta:
+        print("Senha incorreta! Tente novamente.\n")
+
+print("Acesso Permitido!")

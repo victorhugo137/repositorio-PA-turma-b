@@ -1,0 +1,9 @@
+a = input("Digite o valor para A: ")
+b = input("Digite o valor para B: ")
+
+# Troca usando atribuição múltipla do Python
+a, b = b, a
+
+print("\nValores trocados:")
+print(f"A = {a}")
+print(f"B = {b}")

@@ -1,0 +1,12 @@
+n = int(input("Quantos termos da sequência de Fibonacci você deseja exibir? "))
+
+t1, t2 = 0, 1
+cont = 0
+
+print("Sequência de Fibonacci:")
+while cont < n:
+    print(t1, end=" -> " if cont < n - 1 else "\n")
+    proximo = t1 + t2
+    t1 = t2
+    t2 = proximo
+    cont += 1

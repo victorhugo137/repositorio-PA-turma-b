@@ -1,0 +1,14 @@
+a = float(input("Digite o comprimento do primeiro lado: "))
+b = float(input("Digite o comprimento do segundo lado: "))
+c = float(input("Digite o comprimento do terceiro lado: "))
+
+# Verificação da existência do triângulo
+if (a + b > c) and (a + c > b) and (b + c > a):
+    if a == b == c:
+        print("Os segmentos formam um Triângulo EQUILÁTERO.")
+    elif a == b or a == c or b == c:
+        print("Os segmentos formam um Triângulo ISÓSCELES.")
+    else:
+        print("Os segmentos formam um Triângulo ESCALENO.")
+else:
+    print("Os segmentos informados NÃO podem formar um triângulo.")

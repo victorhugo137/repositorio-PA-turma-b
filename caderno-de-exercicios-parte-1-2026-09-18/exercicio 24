@@ -1,0 +1,19 @@
+import random
+
+numero_secreto = random.randint(1, 10)
+tentativas = 0
+acertou = False
+
+print("Pensei em um número entre 1 e 10. Tente adivinhar!")
+
+while not acertou:
+    palpite = int(input("Seu palpite: "))
+    tentativas += 1
+    
+    if palpite == numero_secreto:
+        acertou = True
+        print(f"Parabéns! Você acertou em {tentativas} tentativa(s).")
+    elif palpite < numero_secreto:
+        print("Mais... Tente um número maior.")
+    else:
+        print("Menos... Tente um número menor.")
